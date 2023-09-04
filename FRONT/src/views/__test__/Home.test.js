@@ -3,7 +3,7 @@ import { expect, test } from 'vitest'
 import { createVuetify } from 'vuetify'
 import * as components from 'vuetify/components'
 import * as directives from 'vuetify/directives'
-import HelloWorld from '/Users/libertadlorda/Desktop/Pif-CampingWeb/FRONT/src/components/HelloWorld.vue'
+import HelloWorld from '/Users/libertadlorda/Desktop/Web-Camping-PIF/FRONT/src/components/HelloWorld.vue'
 
 const vuetify = createVuetify({
   components,
