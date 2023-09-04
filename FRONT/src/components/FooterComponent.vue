@@ -1,0 +1,72 @@
+<script setup>
+import { RouterLink } from 'vue-router';
+
+const links = [
+    {
+        name: 'Home',
+        route: '/',
+    },
+    {
+        name: 'Team',
+        route: '/team',
+    },
+    {
+        name: 'Trabaja con nosotros',
+        route: '/trabaja',
+    },
+    {
+        name: 'Contacto',
+        route: '/contacto',
+    },
+    {
+        name: 'Aviso Legal',
+        route: '/legal',
+    },
+    {
+        name: 'Política de Cookies',
+        route: '/cookies',
+    }
+];
+
+</script>
+
+<template>
+    <v-footer class="bg-grey-lighten-1" color="primary">
+      <v-row justify="center" no-gutters>
+        <RouterLink
+          v-for="link in links"
+          :key="link.name"
+          :to="link.route"
+          variant="text"
+          class="mx-2 links"
+          rounded="xl"
+        >
+          {{ link.name }}
+        </RouterLink>
+        <v-col class="text-center mt-4 footerText" cols="12">
+          {{ new Date().getFullYear() }} —
+          <strong>Camping de Bañugues S.L.</strong>
+        </v-col>
+      </v-row>
+    </v-footer>
+  </template>
+  
+
+<style scoped>
+footer {
+  height: 200px !important;
+}
+.links {
+    color: white;
+    text-decoration: none;
+    transition: 0.2s;
+}
+.links:hover{
+  color: rgb(45, 44, 44);
+  letter-spacing: 0.08rem;
+  padding: 0 1rem;
+  font-weight: bolder;
+}
+</style>
+
+  
