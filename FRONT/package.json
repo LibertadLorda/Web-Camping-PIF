@@ -1,11 +1,19 @@
 {
+<<<<<<< HEAD
   "name": "Proyecto-Camping-Web",
+=======
+  "name": "Web-Camping-PIF",
+>>>>>>> be59bd924a803cbef46defa7ceb9f2c6bb0c6cd6
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
+<<<<<<< HEAD
     "lint": "eslint",
+=======
+    "lint": "eslint . --fix --ignore-path .gitignore",
+>>>>>>> be59bd924a803cbef46defa7ceb9f2c6bb0c6cd6
     "test": "vitest"
   },
   "dependencies": {
