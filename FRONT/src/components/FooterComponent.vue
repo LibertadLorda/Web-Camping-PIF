@@ -31,6 +31,7 @@ const links = [
 </script>
 
 <template>
+  <div>
     <v-footer class="bg-grey-lighten-1" color="primary">
       <v-row justify="center" no-gutters>
         <RouterLink
@@ -49,6 +50,7 @@ const links = [
         </v-col>
       </v-row>
     </v-footer>
+  </div>
   </template>
   
 
