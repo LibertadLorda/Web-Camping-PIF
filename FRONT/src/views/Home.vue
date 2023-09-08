@@ -1,6 +1,6 @@
 <script setup>
 import { ref, onMounted } from 'vue';
-import videoSource from '../assets/Nature.mp4';
+import videoSource from '../assets/';
 const videoPlayer = ref(null);
 
 onMounted(() => {
