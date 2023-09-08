@@ -8,23 +8,23 @@ const links = [
     },
     {
         name: 'Team',
-        route: '/team',
-    },
-    {
-        name: 'Trabaja con nosotros',
-        route: '/trabaja',
+        route: '/Team',
     },
     {
         name: 'Contacto',
-        route: '/contacto',
+        route: '/Contact',
     },
     {
         name: 'Aviso Legal',
-        route: '/legal',
+        route: '/Legacy',
+    },
+    {
+        name: 'Política de Privacidad',
+        route: 'Privacy',
     },
     {
         name: 'Política de Cookies',
-        route: '/cookies',
+        route: '/Cookies',
     }
 ];
 

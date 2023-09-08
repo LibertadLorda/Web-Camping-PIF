@@ -3,11 +3,11 @@ import http from '../httpCommon';
 export default({
 
     create(Data){
-        return http.post(`/product`, ProductData);
+        return http.post(`/product`, Data);
     },
 
     getAll() {
-        return http.get(`/camping`);
+        return http.get(`/camping` );
     },
       
     getById(productId) {

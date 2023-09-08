@@ -15,7 +15,6 @@ public class services {
     @Autowired
     repositories myCamp;
 
-
     public List<models> getProducts() {
 
         return (List<models>)myCamp.findAll();
@@ -45,7 +44,7 @@ public class services {
     public models changeProduct(int id, models newProduct) {
         try{
             models toUpdateProduct= myCamp.findById(id).get();
-            toUpdateProduct.setProdType(newProduct.getProdType());
+            toUpdateProduct.setTypeFee(newProduct.getTypeFee());
 
             return toUpdateProduct;
 

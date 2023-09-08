@@ -18,8 +18,10 @@ public class models {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "Id")
     private int id;
-    @Column(name = "Type")
-    private String prodType;
+    @Column(name = "TypeFee")
+    private String typeFee;
+    @Column(name ="TypeService")
+    private String typeService;
     @Column (name = "Price")
     private Float price;
 
