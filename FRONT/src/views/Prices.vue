@@ -34,7 +34,6 @@ onMounted(dataPrices);
         <v-tab value="all">Todas</v-tab>
         <v-tab value="Tarifas Temporada" >Tarifas temporada</v-tab>
         <v-tab value="Tarifas Reducidas" >Tarifas reducidas</v-tab>
-        <v-tab value="rules" >Normas de la estancia</v-tab>
     </v-tabs>
     
     <v-window v-model="tab">
@@ -96,7 +95,7 @@ onMounted(dataPrices);
 
 .filterTable
  {
-    width: 80%; 
+    width: 70%; 
     border-collapse: collapse; 
     margin: 2rem auto;
     border-radius: 10px;

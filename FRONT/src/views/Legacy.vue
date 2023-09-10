@@ -4,28 +4,24 @@ import PolicyComponent from '../components/PolicyComponent.vue';
 </script>
 
 <template>
-    <div class="legacyContainer">
-        <div class="legacyItem">
+    <div>
+        <div>
             <PolicyComponent
             title="Aviso Legal"
-            content="En cumplimiento de las obligaciones establecidas en el artículo 10 
-            de la Ley 34/2002, de 11 de julio, de Servicios de la Sociedad de la Información y Comercio Electrónico, se hace constar que esta página corresponde a la entidad:
-            -CAMPING DE BAÑUGUES, S.L.. CIF: B33379850
-            -Domicilio: BAÑUGUES, S/N 33448, GOZON.
-            -Tfno: 985880785
-            -Mail: campingelmolino@hotmail.com
-            -Web: www.campingdebañugues.es
-            Inscripción de la entidad:
+            content="En cumplimiento de las obligaciones establecidas en el artículo 10 de la Ley 34/2002, de 11 de julio, de Servicios de la Sociedad de la Información y Comercio Electrónico, se hace constar que esta página corresponde a la entidad:
 
-            Empresa:CAMPING DE BAÑUGUES, S.L. Registro Mercantil de Asturias Tomo 1.447-Folio 97 hoja nº6.670 inscripción 1º 4/1/1193
-            Registro de establecimientos hoteleros/turismo de Asturias, con numero 539"
+    - CAMPING DE BAÑUGUES, S.L.. CIF: B33379850
+    - Domicilio: BAÑUGUES, S/N 33448, GOZON.
+    - Tfno: 985880785
+    - Mail: campingelmolino@hotmail.com
+    - Web: www.campingdebañugues.es
+
+Inscripción de la entidad:
+Empresa:CAMPING DE BAÑUGUES, S.L. Registro Mercantil de Asturias Tomo 1.447-Folio 97 hoja nº6.670 inscripción 1º 4/1/1193 Registro de establecimientos hoteleros/turismo de Asturias, con número 539."
             />
             <PolicyComponent
             title="Usuario"
-            content="El acceso y/o uso de este portal de CAMPING DE BAÑUGUES, 
-            S.L. atribuye la condición de USUARIO, que acepta, desde dicho acceso y/o uso,
-             las Condiciones Generales de Uso aquí reflejadas. Las citadas Condiciones 
-             serán de aplicación independientemente de las Condiciones Generales de Contratación que en su caso resulten de obligado cumplimiento."
+            content="El acceso y/o uso de este portal de CAMPING DE BAÑUGUES, S.L. atribuye la condición de USUARIO, que acepta, desde dicho acceso y/o uso, las Condiciones Generales de Uso aquí reflejadas. Las citadas Condiciones serán de aplicación independientemente de las Condiciones Generales de Contratación que en su caso resulten de obligado cumplimiento."
             /> 
             <PolicyComponent
             title="Uso del portal"
