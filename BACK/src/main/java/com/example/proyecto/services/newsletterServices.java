@@ -1,20 +1,26 @@
 package com.example.proyecto.services;
 
-import com.example.proyecto.models.modelsNewsletter;
+import com.example.proyecto.models.newsletterModel;
+import com.example.proyecto.repositories.newsletterRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
-public class servicesNewsletter {
+public class newsletterServices {
     @Autowired
-    servicesNewsletter myNewsletters;
+    private newsletterRepository myNewsletters;
 
 
-    public modelsNewsletter setNewsletter(modelsNewsletter newNewsletter) {
+    public List<newsletterModel> getNewsletter() {
+
+        return (List<newsletterModel>)myNewsletters.findAll();
+    }
+
+    public newsletterModel saveNewsletter(newsletterModel newNewsletter) {
         try {
-            return myNewsletters.setNewsletter(newNewsletter);
+            return myNewsletters.save(newNewsletter);
         } catch (Exception e) {
             e.printStackTrace();
             return null;

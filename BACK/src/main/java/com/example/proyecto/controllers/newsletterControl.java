@@ -1,27 +1,30 @@
 package com.example.proyecto.controllers;
 
-import com.example.proyecto.models.modelsNewsletter;
-import com.example.proyecto.services.servicesNewsletter;
+import com.example.proyecto.models.newsletterModel;
+import com.example.proyecto.repositories.newsletterRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
-@RequestMapping("/camping")
+@RequestMapping("/newsletter")
 @CrossOrigin(origins = "*")
-public class controllersNewsletter {
+public class newsletterControl {
 
         @Autowired
-        servicesNewsletter myNewsletter;
+        private newsletterRepository myNewsletters;
 
-        @GetMapping
-        public List<modelsNewsletter> setNewsletter(modelsNewsletter newNewsletter) {
+       @GetMapping
+       public List<newsletterModel> getNewsletter() {
 
-            return (List<modelsNewsletter>) myNewsletter.setNewsletter(newNewsletter);
+           return myNewsletters.findAll();
+       }
+
+        @PostMapping (path="/add")
+        public newsletterModel saveNewsletter(@RequestBody newsletterModel newNewsletter) {
+
+            return myNewsletters.save(newNewsletter);
         }
     }
 

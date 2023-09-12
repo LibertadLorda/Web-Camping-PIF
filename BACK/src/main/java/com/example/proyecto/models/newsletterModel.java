@@ -12,7 +12,7 @@ import lombok.Setter;
 @Table(name="newsletter")
 @NoArgsConstructor
 @AllArgsConstructor
-public class modelsNewsletter
+public class newsletterModel
 {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

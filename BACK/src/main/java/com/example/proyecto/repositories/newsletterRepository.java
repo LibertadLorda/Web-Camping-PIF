@@ -1,7 +1,9 @@
 package com.example.proyecto.repositories;
 
-import com.example.proyecto.models.modelsNewsletter;
-import org.springframework.data.repository.CrudRepository;
+import com.example.proyecto.models.newsletterModel;
+import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface repositoriesNewsletter extends CrudRepository<modelsNewsletter, Integer> {
+public interface newsletterRepository extends JpaRepository<newsletterModel, Integer> {
+    newsletterModel save(newsletterModel newNewsletter);
+
 }
