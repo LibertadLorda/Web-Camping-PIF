@@ -3,6 +3,7 @@ import { ref, onMounted } from 'vue';
 import videoSource from '../assets/Nature.mp4';
 import GalleryComponent from '../components/GalleryComponent.vue'
 import NewsletterComponent from '../components/NewsletterComponent.vue'
+import FacilitiesComponent from '../components/FacilitiesComponent.vue';
 
 const videoPlayer = ref(null);
 const overlay = ref(false);
@@ -16,35 +17,39 @@ onMounted(() => {
 });
 
 const photos= ref ([
+
+  { 
+    src: 'src/assets/autocaravanas03.jpg',
+  },
   {
     src: 'src/assets/panoramica.jpg',
   },
   {
-    src: 'src/assets/autocaravanas03.jpg',
+    src: 'src/assets/autocaravanas04.jpg',
   },
-  {
-    src: 'src/assets/CT001_Camping_El_Molino_3.jpg',
-  },
+
   {
     src: 'src/assets/tiendas1.jpeg',
   },
+
   {
-    src: 'src/assets/ocio.jpg',
+    src: 'src/assets/playa.jpg',
   },
+  
   {
     src: 'src/assets/peñas3.jpeg',
   },
-
 ])
+
 </script>
 
 <template>
   <div class="container">
     <div class="video-container">
-    <video class="camp" ref="videoPlayer" autoplay loop muted>
-      <source :src="videoSource" type="video/mp4">
-      Tu navegador no soporta la reproducción de videos.
-    </video>
+      <video class="camp" ref="videoPlayer" autoplay loop muted>
+        <source :src="videoSource" type="video/mp4">
+        Tu navegador no soporta la reproducción de videos.
+      </video>
     <div class="text-overlay">
         <h2>Camping El Molino</h2>
         <h3>#Gozón</h3>
@@ -59,16 +64,18 @@ const photos= ref ([
       Ambiente familiar, y en un entorno agradable para <i>RE-CONECTAR</i>.</p>
   </div>
   <div>
-    <GalleryComponent :photos="photos"/>
+    <FacilitiesComponent/>
   </div>
-  <div class="btn_custom_block">
-    <h4>¡Subscríbete a nuestra Newsletter!</h4>
-    <v-btn class="btn_custom" color="primary" rounded="xl" @click.stop="overlay = true">Aquí</v-btn>
+   <div class="btn_custom_block">
+    <v-btn class="btn_custom" color="primary" rounded="xl" @click.stop="overlay = true">¡Subscríbete a nuestra Newsletter!</v-btn>
     <v-overlay v-model="overlay" class="d-flex align-center justify-center" scrim="#000" @click:outside="closeOverlay">
       <div class="my-overlay-content" style="max-height: 80vh; overflow-y: auto; background-color: white; z-index: 2001;">
         <NewsletterComponent :overlay="overlay" @closeOverlay="closeOverlay" />
       </div>
     </v-overlay>
+  </div>
+  <div>
+    <GalleryComponent :photos="photos"/>
   </div>
 </template>
 
@@ -79,10 +86,12 @@ const photos= ref ([
     z-index: 1;
     opacity: 80%; 
 }
+
 .container{
   position: relative;
   overflow: hidden;
 }
+
 .text-overlay {
   position: absolute;
   top: 0;
@@ -103,7 +112,7 @@ h2, h3 {
   font-size: 6vw;
 }
 
-.welcome{
+.welcome {
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -117,7 +126,7 @@ h2, h3 {
   text-decoration: none;
   transition: 0.3s;
   padding: 0 50px;
-  }
+}
 
 .btn_custom :hover{
   letter-spacing: 0.15rem;

@@ -1,10 +1,10 @@
 <script setup>
 
 const props = defineProps({
-    imageSrc: String,
     title: String,
     content: String,
 });
+
 </script>
 
 <template>
@@ -19,10 +19,12 @@ const props = defineProps({
 
 
 <style>
+
 .cardPolicy {
     max-width: 900px;
     padding: 1rem;
 }
+
 .content{
     margin-top: 1rem;
 }
@@ -39,6 +41,5 @@ const props = defineProps({
     white-space: pre-wrap;
     align-items: left;
 }
-
 
 </style>

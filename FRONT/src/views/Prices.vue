@@ -40,52 +40,52 @@ onMounted(dataPrices);
         <v-window-item value="all">
             <v-table class="filterTable">
             <thead>
-            <tr>
-                <th class="text-left">Tarifas</th>
-                <th class="text-left">Precio</th>
-            </tr>
+              <tr>
+                  <th class="text-left">Tarifas</th>
+                  <th class="text-left">Precio</th>
+              </tr>
             </thead>
             <tbody>
-            <tr v-for="price in filteredPrices('all')" :cols="price.flex" :key="price.id">
-                <td>{{ price.typeService }}</td>
-                <td>{{ price.price }} €</td> 
-            </tr>
+              <tr v-for="price in filteredPrices('all')" :cols="price.flex" :key="price.id">
+                  <td>{{ price.typeService }}</td>
+                  <td>{{ price.price }} €</td> 
+              </tr>
             </tbody>
         </v-table>
         </v-window-item>
 
         <v-window-item value="Tarifas Temporada">
-        <v-table class="filterTable">
-            <thead>
-            <tr>
-                <th class="text-left"> Tarifas Temporada 2023</th>
-                <th class="text-left">Precio</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr v-for="price in filteredPrices('Tarifas Temporada')" :cols="price.flex" :key="price.id">
-                <td>{{ price.typeService }}</td>
-                <td>{{ price.price }} €</td> 
-            </tr>
-            </tbody>
-        </v-table>
+          <v-table class="filterTable">
+              <thead>
+                <tr>
+                    <th class="text-left"> Tarifas Temporada 2023</th>
+                    <th class="text-left">Precio</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr v-for="price in filteredPrices('Tarifas Temporada')" :cols="price.flex" :key="price.id">
+                    <td>{{ price.typeService }}</td>
+                    <td>{{ price.price }} €</td> 
+                </tr>
+              </tbody>
+          </v-table>
         </v-window-item>
     
         <v-window-item value="Tarifas Reducidas">
-            <v-table class="filterTable">
+          <v-table class="filterTable">
             <thead>
-            <tr>
-                <th class="text-left">Tarifas temporada alta (15 de mayo al 15 de septiembre)</th>
-                <th class="text-left">Precio</th>
-            </tr>
+              <tr>
+                  <th class="text-left">Tarifas temporada alta (15 de mayo al 15 de septiembre)</th>
+                  <th class="text-left">Precio</th>
+              </tr>
             </thead>
             <tbody>
-            <tr v-for="price in filteredPrices('Tarifas Reducidas')" :cols="price.flex" :key="price.id">
-                <td>{{ price.typeService }}</td>
-                <td>{{ price.price }} €</td> 
-            </tr>
+              <tr v-for="price in filteredPrices('Tarifas Reducidas')" :cols="price.flex" :key="price.id">
+                  <td>{{ price.typeService }}</td>
+                  <td>{{ price.price }} €</td> 
+              </tr>
             </tbody>
-        </v-table>
+          </v-table>
         </v-window-item>
     </v-window>
 </v-card>
@@ -107,6 +107,7 @@ onMounted(dataPrices);
   margin: 2rem auto;
   width: 80%;
 }
+
 .filterTable  th,
 .filterTable  td {
     border: 1px solid #cccccc; 
@@ -119,6 +120,7 @@ onMounted(dataPrices);
     font-weight: bold; 
     text-transform: uppercase; 
 }
+
 .filterTable tbody tr:nth-child(odd) {
     background-color: #9CCC65; 
     opacity: 0.8;
@@ -135,7 +137,6 @@ onMounted(dataPrices);
     margin: 10px;
   }
 }
-
 </style>
 
   

@@ -5,16 +5,8 @@ const props = defineProps({
 </script>
 
 <template>
-    <v-carousel
-      cycle
-      height="500"
-      hide-delimiter-background
-      show-arrows="hover"
-    >
-      <v-carousel-item
-        v-for="(photo, i) in photos"
-        :key="i"
-      >
+    <v-carousel cycle height="500" hide-delimiter-background show-arrows="hover">
+      <v-carousel-item v-for="(photo, i) in photos" :key="i">
         <img :src="photo.src" alt="Foto" class="carouselImg" >
       </v-carousel-item>
     </v-carousel>
@@ -26,4 +18,5 @@ const props = defineProps({
   width: 100%;
   height: 100%;
 }
+
 </style>

@@ -34,10 +34,19 @@
   "roboto-fontface": "*",
   
     
+  "uuid": "^9.0.0",
+  
+    
   "vee-validate": "^4.11.3",
   
     
   "vue": "^3.3.4",
+  
+    
+  "vue-captcha": "^1.0.2",
+  
+    
+  "vue-recaptcha": "^3.0.0-alpha.6",
   
     
   "vue-router": "^4.0.0",

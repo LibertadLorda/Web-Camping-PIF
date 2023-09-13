@@ -2,6 +2,7 @@
 import { ref, computed } from 'vue'
 import NewsletterService from '../services/NewsletterService';
 
+
 const nameSurname = ref('');
 const phone = ref('');
 const email = ref('');

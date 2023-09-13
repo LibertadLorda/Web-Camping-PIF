@@ -56,7 +56,8 @@ const links = [
 
 <style scoped>
 footer {
-  height: 200px !important;
+  height: 150px !important;
+  margin-top: 2rem;
 }
 .links {
     color: white;

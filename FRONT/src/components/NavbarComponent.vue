@@ -11,12 +11,12 @@ const items = [
     route: '/',
   },
   {
-    title: 'Prices',
+    title: 'Precios',
     route: '/Prices',
   },
   {
-    title: 'Productos',
-    route: '/products',
+    title: 'Instalaciones',
+    route: '/Facilities',
   },
   {
     title: 'Login',
