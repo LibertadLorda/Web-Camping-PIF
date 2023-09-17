@@ -29,7 +29,7 @@ onMounted(dataPrices);
 </script>
 
 <template>
-    <v-card>
+   
     <v-tabs class="filterTab" v-model="tab" bg-color="primary" grow centered>
         <v-tab value="all">Todas</v-tab>
         <v-tab value="Tarifas Temporada" >Tarifas temporada</v-tab>
@@ -88,7 +88,7 @@ onMounted(dataPrices);
           </v-table>
         </v-window-item>
     </v-window>
-</v-card>
+
 </template>
 
 <style scoped>
@@ -116,13 +116,13 @@ onMounted(dataPrices);
 }
 
 .filterTable  th {
-    background-color: #f0f0f0; 
+    background-color: #64B5F6; 
     font-weight: bold; 
     text-transform: uppercase; 
 }
 
 .filterTable tbody tr:nth-child(odd) {
-    background-color: #9CCC65; 
+    background-color: #E3F2FD; 
     opacity: 0.8;
 }
 

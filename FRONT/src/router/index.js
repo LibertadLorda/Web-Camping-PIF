@@ -5,6 +5,7 @@ import Facilities from '../views/Facilities.vue'
 import Legacy from '../views/Legacy.vue'
 import Privacy from '../views/Privacy.vue'
 import Prices from '../views/Prices.vue'
+import Gallery from '../views/Gallery.vue'
 
 
 const routes = [
@@ -38,6 +39,13 @@ const routes = [
         name: 'Prices',
         component: Prices,
       },
+      {
+        path: '/Gallery',
+        name: 'Gallery',
+        component: Gallery,
+      },
+
+     
     ]
 
 const router = createRouter({

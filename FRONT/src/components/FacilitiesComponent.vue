@@ -39,11 +39,13 @@ const text =  ref ([
 </script>
 
 <template>
-<RouterLink to="/Facilities"><p class="text-right pa-3">Ver todas las instalaciones <v-icon>mdi-chevron-right</v-icon></p>
+<RouterLink to="/Facilities"><p class="text-right">Ver todas las instalaciones <v-icon>mdi-chevron-right</v-icon></p>
     </RouterLink>
   <v-sheet
     class="mx-auto"
     max-width="1400"
+    color="secondary"
+    
   >
     <v-slide-group
       v-model="model"
@@ -55,13 +57,16 @@ const text =  ref ([
         v-for="(item, index) in image"
         :key="index"
         v-slot="{ toggle }"
+        
       >
-        <v-card
+      <v-card
           height="300"
           width="350"
           @click="toggle"
           style="position: relative; overflow: hidden;"
+          color="secondary"
         >
+        
         <v-img
             :src= "item.src"
             height="160"
@@ -96,16 +101,12 @@ const text =  ref ([
     bottom: -2px; 
     width: 0;
     height: 2px; 
-    background-color: #007BFF; 
+    background-color: #64B5F6; 
     transition: width 0.3s ease; 
 }
 
 .title:hover::after {
     width: 100%; 
-}
-
-.text {
-    font-size: 1rem;
 }
 
 .text-right{

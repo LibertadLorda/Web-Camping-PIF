@@ -15,3 +15,12 @@ import { RouterView} from 'vue-router';
 
 </script>
 
+<style>
+* {
+  font-family: "Nunito", sans-serif;
+}
+main{
+    background-color: #E3F2FD;   
+}
+
+</style>

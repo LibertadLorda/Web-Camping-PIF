@@ -3,12 +3,8 @@ import { RouterLink } from 'vue-router';
 
 const links = [
     {
-        name: 'Home',
+        name: 'Inicio',
         route: '/',
-    },
-    {
-        name: 'Team',
-        route: '/Team',
     },
     {
         name: 'Contacto',
@@ -55,17 +51,24 @@ const links = [
   
 
 <style scoped>
+
 footer {
-  height: 150px !important;
-  margin-top: 2rem;
+  height: 100px !important;
+  background: linear-gradient(to bottom,#B3E5FC,#0091EA);
+  color: white;
+  opacity: 0.9; 
+  position: relative; 
+  z-index: 1;
 }
+
 .links {
-    color: white;
+    color: black;
     text-decoration: none;
     transition: 0.2s;
 }
 .links:hover{
-  color: rgb(45, 44, 44);
+  text-decoration: none;
+  color: white;
   letter-spacing: 0.08rem;
   padding: 0 1rem;
   font-weight: bolder;

@@ -13,7 +13,7 @@ const props = defineProps({
         <v-list-item class="content">
             <pre class="content-text">{{ content }}</pre>
         </v-list-item>    
-        <v-divider></v-divider>
+        
     </div>
 </template>
 
@@ -32,7 +32,7 @@ const props = defineProps({
 .title {
     font-weight: bold;
     font-style: italic; 
-    font-size: 2rem;
+    font-size: 20px;
 }
 
 .content-text{
@@ -40,6 +40,7 @@ const props = defineProps({
     font-family: inherit; 
     white-space: pre-wrap;
     align-items: left;
+    font-size: 15px;
 }
 
 </style>

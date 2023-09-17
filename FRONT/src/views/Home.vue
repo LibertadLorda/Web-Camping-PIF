@@ -122,7 +122,6 @@ h2, h3 {
 }
 
 .btn_custom {
-  margin-top: 15px;
   text-decoration: none;
   transition: 0.3s;
   padding: 0 50px;
@@ -136,10 +135,11 @@ h2, h3 {
 
 .btn_custom_block{
   text-align: center;
-  padding-top: 30px;
+  padding-top: 10px;
 }
 
 .v-btn{
   margin-bottom: 25px ;
 }
+
 </style>

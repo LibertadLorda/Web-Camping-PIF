@@ -7,30 +7,32 @@ const group = ref(null);
 
 const items = [
   {
-    title: 'Home',
+    title: 'Inicio',
     route: '/',
-  },
-  {
-    title: 'Precios',
-    route: '/Prices',
   },
   {
     title: 'Instalaciones',
     route: '/Facilities',
   },
   {
-    title: 'Login',
-    route: '/login',
+    title: 'Precios',
+    route: '/Prices',
   },
+  {
+    title: 'Contacto',
+    route: '/Contact',
+  },
+  {
+    title: 'Fotos',
+    route: '/Gallery',
+  },
+  
 ];
 
 watch(group, () => {
   drawer.value = false;
 });
 
-const closeOverlay = (newValue) => {
-  overlay.value = newValue;
-};
 </script>
 
 <template>
@@ -46,11 +48,9 @@ const closeOverlay = (newValue) => {
 
       <v-spacer></v-spacer>
       
-      <v-btn class="button" size="medium" color="surface-variant" variant="text"><i class="fas fa-campground fa-lg"></i>Fotos</v-btn>
+      <RouterLink :to="'/Gallery'"><v-btn class="button" size="medium" color="surface-variant" variant="text"><i class="fas fa-campground fa-lg"></i>Fotos</v-btn></RouterLink>
         <RouterLink :to="'/Facilities'"><v-btn class="button" size="medium" color="surface-variant" variant="text"><i class="fas fa-leaf fa-lg"></i>Instalaciones</v-btn></RouterLink>
         <RouterLink :to="'/Prices'"><v-btn class="button" size="medium" color="surface-variant" variant="text"><i class="fas fa-euro-sign fa-lg"></i>Tarifas</v-btn></RouterLink>
-        <v-btn class="button" size="medium" color="surface-variant" variant="text"><i class="fas fa-video fa-lg"></i>Webcam</v-btn>
-
     </v-app-bar>
 
     <div v-if="$route.path === '/'" class="banner"></div>
@@ -71,12 +71,27 @@ const closeOverlay = (newValue) => {
 </template>
 
 <style scoped>
+.appNav::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom,#0091EA,#B3E5FC); 
+  opacity: 0.8; 
+  z-index: -1;
+}
+
 .button {
   margin-right: 2rem;
+  
 }
 
 .nav {
-  max-width: 300px; 
+  max-width: 200px; 
+  background: linear-gradient(to bottom,#0091EA,#B3E5FC); 
+  opacity: 0.8; 
 }
 
 .itemList {
@@ -105,10 +120,6 @@ const closeOverlay = (newValue) => {
 a{
   text-decoration: none;
   color: black;
-}
-
-.banner {
-    background-position: center;
 }
 
 .icon-navbar{

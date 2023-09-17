@@ -1,6 +1,6 @@
 <script setup>
 import { useField, useForm } from 'vee-validate'
-import PrivacyComponent from '../components/PrivacyComponent.vue'
+import PrivacyOverlayComponent from '../components/PrivacyOverlayComponent.vue'
 
 const { handleSubmit, handleReset } = useForm({
     validationSchema: {
@@ -73,7 +73,7 @@ const googleMapsLink = 'https://www.google.com/maps/d/viewer?mid=1dA0607HrkfUz31
     </div>
   </div>
     <div class="cardForm">    
-    <h3 class="bg-yellow-lighten-3">Formularío de Envío</h3>
+    <h3 class="bg-yellow-lighten-3">Formularío de contacto</h3>
     <form @submit.prevent="submit">
       <v-text-field v-model="name.value.value" :counter="10"
         :error-messages="name.errorMessage.value"
@@ -86,15 +86,18 @@ const googleMapsLink = 'https://www.google.com/maps/d/viewer?mid=1dA0607HrkfUz31
         label="E-mail"></v-text-field>
   
       <v-text-field v-model="comments.value.value" label="Comentarios"></v-text-field>
-  
-      Soy mayor de 14 años y he leído la <PrivacyComponent/>
-        
-        <v-checkbox v-model="checkbox.value.value"
+      <div class="formGroup">
+      <v-checkbox class="checkbox" v-model="checkbox.value.value"
         :error-messages="checkbox.errorMessage.value" value="1" type="checkbox">
-        </v-checkbox>
-        <v-spacer></v-spacer>
-        <v-btn class="me-4" type="submit">Enviar</v-btn>
-        <v-btn @click="handleReset">Borrar</v-btn></form>
+      
+        </v-checkbox>     
+        <label for="ageCheckbox">Soy mayor de 14 años y he leído la <PrivacyOverlayComponent/></label>
+</div>      
+<div class="formAction">
+        <v-btn class="me-2" color="primary" type="submit">Enviar</v-btn>
+        <v-btn color="secondary" @click="handleReset">Borrar</v-btn>
+        </div>
+      </form>
     </div>
   </template>
 
@@ -103,7 +106,7 @@ const googleMapsLink = 'https://www.google.com/maps/d/viewer?mid=1dA0607HrkfUz31
   margin: 2rem ;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .card {
@@ -111,22 +114,38 @@ const googleMapsLink = 'https://www.google.com/maps/d/viewer?mid=1dA0607HrkfUz31
   background-color: white;
   border: 1px solid #ccc;
   padding: 20px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px #B3E5FC;
   border-radius: 5px;
   max-width: 400px; 
   box-sizing: border-box;
 }
 
 .cardForm{
-  flex: 1;
+  width: 75vh;
+  max-width: 600px;
   background-color: white;
-  border: 1px solid #ccc;
+  margin: 2rem auto ;
   padding: 20px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  border-radius: 5px;
-  max-width: 700px; 
-  box-sizing: border-box;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px #B3E5FC;
 }
+
+.formGroup{
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+
+
+label {
+  font-weight: bold;
+}
+
+.formAction {
+  display: flex;
+  justify-content: center;
+}
+
 </style>
 
 
