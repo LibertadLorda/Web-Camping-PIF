@@ -1,5 +1,5 @@
 <script setup>
-import PolicyComponent from '../components/PolicyComponent.vue'
+import InformationComponent from '../components/InformationComponent.vue'
 import {ref} from 'vue'
 
 const dialog= ref(false);
@@ -11,13 +11,13 @@ const dialog= ref(false);
     <v-dialog v-model="dialog" width="800" >
       <v-card>
         <v-card-text @click="dialog = false">
-          <PolicyComponent
+          <InformationComponent
             title="Política de privacidad"
             content="En cumplimiento de las obligaciones establecidas en la Ley Orgánica 3/2018, de 5 de diciembre, de Protección de Datos Personales y Garantía de los Derechos Digitales se le facilita la información relativa al tratamiento de sus datos personales."
             />
             <v-divider class="divider"></v-divider>
 
-            <PolicyComponent
+            <InformationComponent
             title="¿Quién es el responsable del tratamiento de tus datos?"
             content="CAMPING DE BAÑUGUES, S.L.. CIF: B33379850
 Domicilio: BAÑUGUES, S/N 33448, GOZON.
@@ -30,7 +30,7 @@ A continuación puede consultar la información sobre como tratamos los datos en
             />
             <v-divider class="divider"></v-divider>
             
-            <PolicyComponent
+            <InformationComponent
             title="Huéspedes"
             content="• ¿Con que finalidades vamos a tratar sus datos personales?
 
@@ -42,7 +42,7 @@ La base legal es tu consentimiento."
             />
             <v-divider class="divider"></v-divider>
             
-            <PolicyComponent
+            <InformationComponent
             title="Contactos de la web o del correo electrónico"
             content="• ¿Qué datos recopilamos a través de la Web?
 
@@ -63,7 +63,7 @@ La aceptación y consentimiento del interesado: En aquellos casos donde para rea
             />
             <v-divider class="divider"></v-divider>
             
-            <PolicyComponent
+            <InformationComponent
             title="Clientes"
             content="•¿Con que finalidades vamos a tratar tus datos personales?
 
@@ -77,7 +77,7 @@ La aceptación y consentimiento del interesado: En aquellos casos donde para rea
             />
             <v-divider class="divider"></v-divider>
             
-            <PolicyComponent
+            <InformationComponent
             title="Proveedores"
             content="• ¿Con que finalidades vamos a tratar tus datos personales?
 
@@ -95,7 +95,7 @@ La base legal es la aceptación de una relación contractual, o en su defecto tu
             />
             <v-divider class="divider"></v-divider>
             
-            <PolicyComponent
+            <InformationComponent
             title="Contactos redes sociales"
             content="• ¿Con que finalidades vamos a tratar tus datos personales?
 
@@ -107,11 +107,11 @@ La base legal es la aceptación de una relación contractual, o en su defecto tu
 
 La aceptación de una relación contractual en el entorno de la red social que corresponda, y conforme a sus políticas de Privacidad:
 
-Facebook: http://www.facebook.com/policy.php?ref=pf
+Facebook: http://www.facebook.com/Information.php?ref=pf
 Instragram: https://help.instagram.com/155833707900388
 Twitter: http://twitter.com/privacy
-Linkedin: http://www.linkedin.com/legal/privacy-policy?trk=hb_ft_priv
-Pinterest: https://about.pinterest.com/es/privacy-policy
+Linkedin: http://www.linkedin.com/legal/privacy-Information?trk=hb_ft_priv
+Pinterest: https://about.pinterest.com/es/privacy-Information
 Youtube: http://www.google.com/intl/es/policies/privacy/
 
 • ¿Durante cuánto tiempo vamos a mantener los datos personales?
@@ -120,7 +120,7 @@ Sólo podemos consultar o dar de baja tus datos de forma restringida al tener un
             />
             <v-divider class="divider"></v-divider>
             
-            <PolicyComponent
+            <InformationComponent
             title="Demandantes de empleo"
             content="• ¿Con que finalidades vamos a tratar tus datos personales?
 
@@ -138,7 +138,7 @@ La base legal es tu consentimiento inequívoco, al enviarnos tu CV."
             />
             <v-divider class="divider"></v-divider>
             
-            <PolicyComponent
+            <InformationComponent
             title="Videovigilancia"
             content="• ¿Con que finalidades vamos a tratar tus datos personales?
             

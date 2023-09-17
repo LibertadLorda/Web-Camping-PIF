@@ -6,6 +6,7 @@ import Legacy from '../views/Legacy.vue'
 import Privacy from '../views/Privacy.vue'
 import Prices from '../views/Prices.vue'
 import Gallery from '../views/Gallery.vue'
+import EditBooking from '../views/EditBooking.vue'
 
 
 const routes = [
@@ -44,6 +45,12 @@ const routes = [
         name: 'Gallery',
         component: Gallery,
       },
+      {
+        path: '/EditBooking',
+        name: 'EditBooking',
+        component: EditBooking,
+      },
+
     ]
 
 const router = createRouter({

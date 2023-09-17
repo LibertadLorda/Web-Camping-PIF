@@ -1,5 +1,5 @@
 <script setup>
-import PolicyComponent from '../components/PolicyComponent.vue';
+import InformationComponent from '../components/InformationComponent.vue';
 import {ref} from 'vue'
 
 const dialog= ref(false);
@@ -8,7 +8,7 @@ const dialog= ref(false);
 <template>
   <div class="cardContainer">
     <div class="facilitiesInfo">
-      <PolicyComponent
+      <InformationComponent
         title="Información general"
         content="
 • Camping situado a 50 m. de la playa de Bañugues
@@ -21,7 +21,7 @@ const dialog= ref(false);
 • Recinto para Guardería de Autocaravanas y Caravanas.
 • Admisión de tarjetas de pago."
 />
-     <PolicyComponent
+     <InformationComponent
         title="Equipamientos sanitarios"
         content="
 • Agua caliente en todas las duchas.
@@ -35,7 +35,7 @@ const dialog= ref(false);
 />
     </div>
     <div class="facilitiesInfo">
-      <PolicyComponent
+      <InformationComponent
         title="Ocio y deporte"
         content="
 - Parque infantil.
@@ -45,14 +45,14 @@ const dialog= ref(false);
 - Zona verdes de juego y esparcimiento.
 - Zona de picnic."/>
        
-      <PolicyComponent
+      <InformationComponent
         title="Servicios"
         content="
 - Restaurante.
 - Bar y cafetería con terraza.
 - Tienda de víveres."/>
 
-      <PolicyComponent
+      <InformationComponent
         title="Accesos"
         content="
 - Accesible a vehículos grandes.
@@ -60,13 +60,13 @@ const dialog= ref(false);
     </div>
 
     <div class="facilitiesInfo">
-      <PolicyComponent
+      <InformationComponent
         title="Horarios"
         content="
 - Recepción: De 08:00 a 00:00h.
 - Restaurante y tienda de víveres: De 10:00 a 00:00"/>
 
-      <PolicyComponent
+      <InformationComponent
         title="Periodos de apertura"
         content="
 - Temporada verano: del 15.05 al 15.09.

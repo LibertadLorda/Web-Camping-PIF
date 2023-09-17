@@ -7,11 +7,11 @@ export default({
     },
 
     getAll() {
-        return http.get(`/camping/newsletter` );
+        return http.get(`/newsletter` );
     },
       
-    getById(productId) {
-        return http.get(`/camping/${id}`);
+    getById(id) {
+        return http.get(`/newsletter/${id}`);
     },
 
 })

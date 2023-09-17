@@ -9,7 +9,7 @@ import lombok.Setter;
 @Getter
 @Setter
 @Entity
-@Table(name="products")
+@Table(name = "products")
 @NoArgsConstructor
 @AllArgsConstructor
 public class models {
@@ -20,9 +20,9 @@ public class models {
     private int id;
     @Column(name = "TypeFee")
     private String typeFee;
-    @Column(name ="TypeService")
+    @Column(name = "TypeService")
     private String typeService;
-    @Column (name = "Price")
+    @Column(name = "Price")
     private Float price;
 
 

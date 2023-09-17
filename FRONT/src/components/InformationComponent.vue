@@ -6,7 +6,7 @@ const props = defineProps({
 </script>
 
 <template>
-    <div class="mx-auto cardPolicy">
+    <div class="mx-auto cardInformation">
         <v-list-head class="title">{{ title }}</v-list-head>
         <v-list-item class="content">
             <pre class="content-text">{{ content }}</pre>
@@ -16,7 +16,7 @@ const props = defineProps({
 
 <style>
 
-.cardPolicy {
+.cardInformation {
     max-width: 900px;
     padding: 1rem;
 }

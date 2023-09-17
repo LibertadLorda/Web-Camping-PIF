@@ -7,10 +7,6 @@ const group = ref(null);
 
 const items = [
   {
-    title: 'Inicio',
-    route: '/',
-  },
-  {
     title: 'Fotos',
     route: '/Gallery',
   },
@@ -25,6 +21,10 @@ const items = [
   {
     title: 'Reserva',
     route: '/Booking',
+  },
+  {
+    title: 'Modifica tu reserva',
+    route: '/EditBooking',
   },
 ];
 
@@ -51,6 +51,7 @@ watch(group, () => {
         <RouterLink :to="'/Facilities'"><v-btn class="button"  color="surface-variant" variant="text">Instalaciones</v-btn></RouterLink>
         <RouterLink :to="'/Prices'"><v-btn class="button"  color="surface-variant" variant="text">Tarifas</v-btn></RouterLink>
         <RouterLink :to="'/Booking'"><v-btn class="button"  color="surface-variant" variant="text">Reserva</v-btn></RouterLink>
+        <RouterLink :to="'/EditBooking'"><v-btn class="button"  color="surface-variant" variant="text">Modifica tu Reserva</v-btn></RouterLink>
 
     </v-app-bar>
 
