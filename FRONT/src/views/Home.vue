@@ -4,6 +4,7 @@ import videoSource from '../assets/Nature.mp4';
 import GalleryComponent from '../components/GalleryComponent.vue'
 import NewsletterComponent from '../components/NewsletterComponent.vue'
 import FacilitiesComponent from '../components/FacilitiesComponent.vue';
+import Booking from './Booking.vue';
 
 const videoPlayer = ref(null);
 const overlay = ref(false);
@@ -40,7 +41,6 @@ const photos= ref ([
     src: 'src/assets/peñas3.jpeg',
   },
 ])
-
 </script>
 
 <template>
@@ -50,12 +50,12 @@ const photos= ref ([
         <source :src="videoSource" type="video/mp4">
         Tu navegador no soporta la reproducción de videos.
       </video>
-    <div class="text-overlay">
-        <h2>Camping El Molino</h2>
-        <h3>#Gozón</h3>
+      <div class="text-overlay">
+          <h2>Camping El Molino</h2>
+          <h3>#Gozón</h3>
+      </div>
     </div>
   </div>
-</div>
   <div class="welcome">
     <h1>¡Bienvenidos!</h1>
     <p>Camping "El Molino" está situado en la misma playa de Bañugues, Gozón. 
@@ -63,13 +63,16 @@ const photos= ref ([
       Dispone de parcelas con agua, deshagüe y conexión eléctrica y terreno llano con sombra. 
       Ambiente familiar, y en un entorno agradable para <i>RE-CONECTAR</i>.</p>
   </div>
+  <div class="btn_custom_block">
+    <RouterLink to="/Booking"><v-btn class="btn_custom" color="primary" rounded="xl">RESERVA</v-btn></RouterLink>
+  </div>
   <div>
     <FacilitiesComponent/>
   </div>
-   <div class="btn_custom_block">
+  <div class="btn_custom_block">
     <v-btn class="btn_custom" color="primary" rounded="xl" @click.stop="overlay = true">¡Subscríbete a nuestra Newsletter!</v-btn>
     <v-overlay v-model="overlay" class="d-flex align-center justify-center" scrim="#000" @click:outside="closeOverlay">
-      <div class="my-overlay-content" style="max-height: 80vh; overflow-y: auto; background-color: white; z-index: 2001;">
+      <div class="my-overlay-content">
         <NewsletterComponent :overlay="overlay" @closeOverlay="closeOverlay" />
       </div>
     </v-overlay>
@@ -104,7 +107,6 @@ const photos= ref ([
   justify-content: center;
   align-items: center;
   background: rgba(0, 0, 0, 0.5);
-  
 }
 
 h2, h3 {
@@ -141,5 +143,4 @@ h2, h3 {
 .v-btn{
   margin-bottom: 25px ;
 }
-
 </style>

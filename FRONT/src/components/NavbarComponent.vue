@@ -11,6 +11,10 @@ const items = [
     route: '/',
   },
   {
+    title: 'Fotos',
+    route: '/Gallery',
+  },
+  {
     title: 'Instalaciones',
     route: '/Facilities',
   },
@@ -19,14 +23,9 @@ const items = [
     route: '/Prices',
   },
   {
-    title: 'Contacto',
-    route: '/Contact',
+    title: 'Reserva',
+    route: '/Booking',
   },
-  {
-    title: 'Fotos',
-    route: '/Gallery',
-  },
-  
 ];
 
 watch(group, () => {
@@ -38,19 +37,21 @@ watch(group, () => {
 <template>
   <div>
     <v-app-bar class="appNav" :elevation="6" color="primary" >
-      <v-app-bar-nav-icon variant="text" @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
+      <v-app-bar-nav-icon variant="text" @click.stop="drawer = !drawer" color="surface-variant"></v-app-bar-nav-icon>
 
         <v-toolbar-title class="text-no-wrap icon-navbar" title="Application">
           <RouterLink to="/">
-            Camping El Molino
+            <p>Camping El Molino</p>
           </RouterLink>
         </v-toolbar-title>
 
       <v-spacer></v-spacer>
       
-      <RouterLink :to="'/Gallery'"><v-btn class="button" size="medium" color="surface-variant" variant="text"><i class="fas fa-campground fa-lg"></i>Fotos</v-btn></RouterLink>
-        <RouterLink :to="'/Facilities'"><v-btn class="button" size="medium" color="surface-variant" variant="text"><i class="fas fa-leaf fa-lg"></i>Instalaciones</v-btn></RouterLink>
-        <RouterLink :to="'/Prices'"><v-btn class="button" size="medium" color="surface-variant" variant="text"><i class="fas fa-euro-sign fa-lg"></i>Tarifas</v-btn></RouterLink>
+        <RouterLink :to="'/Gallery'"><v-btn class="button" color="surface-variant" variant="text">Fotos</v-btn></RouterLink>
+        <RouterLink :to="'/Facilities'"><v-btn class="button"  color="surface-variant" variant="text">Instalaciones</v-btn></RouterLink>
+        <RouterLink :to="'/Prices'"><v-btn class="button"  color="surface-variant" variant="text">Tarifas</v-btn></RouterLink>
+        <RouterLink :to="'/Booking'"><v-btn class="button"  color="surface-variant" variant="text">Reserva</v-btn></RouterLink>
+
     </v-app-bar>
 
     <div v-if="$route.path === '/'" class="banner"></div>
@@ -67,10 +68,11 @@ watch(group, () => {
         </RouterLink>
       </v-list>
     </v-navigation-drawer>
-</div>
+  </div>
 </template>
 
 <style scoped>
+
 .appNav::before {
   content: '';
   position: absolute;
@@ -85,18 +87,21 @@ watch(group, () => {
 
 .button {
   margin-right: 2rem;
-  
 }
 
 .nav {
   max-width: 200px; 
-  background: linear-gradient(to bottom,#0091EA,#B3E5FC); 
+  background: linear-gradient(to top,#0091EA,#B3E5FC); 
   opacity: 0.8; 
+}
+
+p{
+  color: rgb(84, 82, 82);
 }
 
 .itemList {
   text-decoration: none;
-  color: black;
+  color: rgb(84, 82, 82);
   padding-left: 10px;
   padding-top: 15px;
 }
@@ -113,26 +118,11 @@ watch(group, () => {
   margin-left: 1rem;
 }
 
-.my-overlay-content {
-  border-radius: 0.3rem;
-}
-
 a{
   text-decoration: none;
-  color: black;
 }
 
 .icon-navbar{
   transition: 0.3s;
 }
-
-.icon-navbar:hover{
-  letter-spacing: 0.1rem;
-  color: white;
-}
-
-.i-navbar{
-  transition: 0.3s;
-}
-
 </style>

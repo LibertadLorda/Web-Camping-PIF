@@ -6,11 +6,11 @@ const dialog= ref(false);
 </script>
 
 <template>
-    <div class="cardContainer">
-        <div class="facilitiesInfo">
-            <PolicyComponent
-            title="Información general"
-            content="
+  <div class="cardContainer">
+    <div class="facilitiesInfo">
+      <PolicyComponent
+        title="Información general"
+        content="
 • Camping situado a 50 m. de la playa de Bañugues
 • Parcelas con césped y arbolado
 • Parcelas con agua y desagüe.
@@ -21,9 +21,9 @@ const dialog= ref(false);
 • Recinto para Guardería de Autocaravanas y Caravanas.
 • Admisión de tarjetas de pago."
 />
-          <PolicyComponent
-          title="Equipamientos sanitarios"
-          content="
+     <PolicyComponent
+        title="Equipamientos sanitarios"
+        content="
 • Agua caliente en todas las duchas.
 • Máquinas automáticas de Lavado y secado.
 • Lavaderos y fregaderos.
@@ -33,10 +33,9 @@ const dialog= ref(false);
 • Reciclaje de basuras.
 "
 />
-      </div>
-      
-       <div class="facilitiesInfo">
-        <PolicyComponent
+    </div>
+    <div class="facilitiesInfo">
+      <PolicyComponent
         title="Ocio y deporte"
         content="
 - Parque infantil.
@@ -46,42 +45,41 @@ const dialog= ref(false);
 - Zona verdes de juego y esparcimiento.
 - Zona de picnic."/>
        
-       <PolicyComponent
+      <PolicyComponent
         title="Servicios"
         content="
 - Restaurante.
 - Bar y cafetería con terraza.
 - Tienda de víveres."/>
 
-<PolicyComponent
+      <PolicyComponent
         title="Accesos"
         content="
 - Accesible a vehículos grandes.
 - Accesos adaptados para minusválidos."/>
-</div>
+    </div>
 
-<div class="facilitiesInfo">
-<PolicyComponent
+    <div class="facilitiesInfo">
+      <PolicyComponent
         title="Horarios"
         content="
 - Recepción: De 08:00 a 00:00h.
 - Restaurante y tienda de víveres: De 10:00 a 00:00"/>
 
-<PolicyComponent
+      <PolicyComponent
         title="Periodos de apertura"
         content="
 - Temporada verano: del 15.05 al 15.09.
 - Otras temporadas: Semana Santa y fines de semana de invierno."/>
 
-<img @click="dialog = !dialog" class="imgSmall" src="../assets/PlanoCamping.jpeg" alt="Plano"/>
-      <v-dialog v-model="dialog" @click="dialog = false">
-        <div class="d-flex justify-center align-center">
-          <img class="imgOverlay" src="../assets/PlanoCamping.jpeg" alt="Plano" />
-        </div>
-      </v-dialog>
+        <img @click="dialog = !dialog" class="imgSmall" src="../assets/PlanoCamping.jpeg" alt="Plano"/>
+        <v-dialog v-model="dialog" @click="dialog = false">
+          <div class="d-flex justify-center align-center">
+            <img class="imgOverlay" src="../assets/PlanoCamping.jpeg" alt="Plano" />
+          </div>
+        </v-dialog>
+    </div>
   </div>
-</div>
-
 </template>
 
 <style scoped>
@@ -114,5 +112,4 @@ const dialog= ref(false);
 .imgOverlay{
   max-width: 70%;
 }
-
 </style>

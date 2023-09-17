@@ -13,9 +13,11 @@ const props = defineProps({
 </template>
 
 <style scoped>
+
 *{
   margin-bottom: 2rem;
 }
+
 .carouselImg {
   object-fit: cover; 
   width: 100%;

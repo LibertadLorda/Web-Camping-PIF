@@ -24,6 +24,7 @@ Puedes dirigirte de cualquier forma para comunicarte con nosotros. Nos reservamo
 A continuación puede consultar la información sobre como tratamos los datos en función del colectivo al que pertenezca el usuario:"
             />
             <v-divider class="divider"></v-divider>
+
             <PolicyComponent
             title="Huéspedes"
             content="• ¿Con que finalidades vamos a tratar sus datos personales?
@@ -35,6 +36,7 @@ Le informamos que sus datos serán tratados con la finalidad de gestionar su res
 La base legal es tu consentimiento."
             />
             <v-divider class="divider"></v-divider>
+
             <PolicyComponent
             title="Contactos de la web o del correo electrónico"
             content="• ¿Qué datos recopilamos a través de la Web?
@@ -55,6 +57,7 @@ Podemos tratar tu IP, qué sistema operativo o navegador usas, e incluso la dura
 La aceptación y consentimiento del interesado: En aquellos casos donde para realizar una solicitud sea necesario cumplimentar un formulario y hacer un 'click' en el botón de enviar, la realización del mismo implicará necesariamente que ha sido informado y ha otorgado expresamente su consentimiento al contenido de la cláusula anexada a dicho formulario o aceptación de la política de privacidad. Todos nuestros formularios cuentan con el símbolo * en los datos obligatorios. Si no facilitas esos campos, o no marcas el checkbox de aceptación de la política de privacidad, no se permitirá el envío de la información. Normalmente tiene la siguiente fórmula: “□ Soy mayor de 14 y he leído y acepto la Política de privacidad."
             />
             <v-divider class="divider"></v-divider>
+
             <PolicyComponent
             title="Clientes"
             content="•¿Con que finalidades vamos a tratar tus datos personales?
@@ -68,6 +71,7 @@ La aceptación y consentimiento del interesado: En aquellos casos donde para rea
 - Gestiones de control y recobro."
             />
             <v-divider class="divider"></v-divider>
+
             <PolicyComponent
             title="Proveedores"
             content="• ¿Con que finalidades vamos a tratar tus datos personales?
@@ -85,6 +89,7 @@ La aceptación y consentimiento del interesado: En aquellos casos donde para rea
 La base legal es la aceptación de una relación contractual, o en su defecto tu consentimiento al contactar con nosotros u ofrecernos sus productos por alguna vía."
             />
             <v-divider class="divider"></v-divider>
+
             <PolicyComponent
             title="Contactos redes sociales"
             content="• ¿Con que finalidades vamos a tratar tus datos personales?
@@ -109,6 +114,7 @@ Youtube: http://www.google.com/intl/es/policies/privacy/
 Sólo podemos consultar o dar de baja tus datos de forma restringida al tener un perfil específico. Los trataremos tanto tiempo como tu nos dejes siguiéndonos, siendo amigos o dándole a “me gusta”, “seguir” o botones similares. Cualquier rectificación de tus datos o restricción de información o de publicaciones debes realizarla a través de la configuración de tu perfil o usuario en la propia red social."
             />
             <v-divider class="divider"></v-divider>
+
             <PolicyComponent
             title="Demandantes de empleo"
             content="• ¿Con que finalidades vamos a tratar tus datos personales?
@@ -126,6 +132,7 @@ Asimismo, te comunicamos que transcurrido un año desde la recepción de tu curr
 La base legal es tu consentimiento inequívoco, al enviarnos tu CV."
             />
             <v-divider class="divider"></v-divider>
+
             <PolicyComponent
             title="Videovigilancia"
             content="• ¿Con que finalidades vamos a tratar tus datos personales?
@@ -205,12 +212,12 @@ Si usamos otro tipo de cookies que no sean las necesarias, podrás consultar la 
 - Los datos tratados se mantendrán en tanto no expiren los plazos legales aludidos anteriormente, si hubiera obligación legal de mantenimiento, o de no existir ese plazo legal, hasta que el interesado solicite su supresión o revoque el consentimiento otorgado.
 - Mantendremos toda la información y comunicaciones relativas a tu compra o a la prestación de nuestro servicio, mientras duren las garantías de los productos o servicios, para atender posibles reclamaciones."
             />
+       
         </div>
     </div>
 </template>
 
 <style>
-
 .divider{
     max-width: 60%;
     margin: 0 auto;

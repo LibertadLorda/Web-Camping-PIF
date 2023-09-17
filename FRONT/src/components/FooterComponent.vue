@@ -7,8 +7,8 @@ const links = [
         route: '/',
     },
     {
-        name: 'Contacto',
-        route: '/Contact',
+        name: 'Reserva',
+        route: '/Booking',
     },
     {
         name: 'Aviso Legal',
@@ -18,10 +18,6 @@ const links = [
         name: 'Política de Privacidad',
         route: 'Privacy',
     },
-    {
-        name: 'Política de Cookies',
-        route: '/Cookies',
-    }
 ];
 
 </script>
@@ -38,7 +34,7 @@ const links = [
           class="mx-2 links"
           rounded="xl"
         >
-          {{ link.name }}
+        {{ link.name }}
         </RouterLink>
         <v-col class="text-center mt-4 footerText" cols="12">
           {{ new Date().getFullYear() }} —
@@ -47,7 +43,7 @@ const links = [
       </v-row>
     </v-footer>
   </div>
-  </template>
+</template>
   
 
 <style scoped>
@@ -62,9 +58,9 @@ footer {
 }
 
 .links {
-    color: black;
-    text-decoration: none;
-    transition: 0.2s;
+  color: black;
+  text-decoration: none;
+  transition: 0.2s;
 }
 .links:hover{
   text-decoration: none;

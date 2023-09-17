@@ -1,10 +1,8 @@
 <script setup>
-
 const props = defineProps({
     title: String,
     content: String,
 });
-
 </script>
 
 <template>
@@ -12,11 +10,9 @@ const props = defineProps({
         <v-list-head class="title">{{ title }}</v-list-head>
         <v-list-item class="content">
             <pre class="content-text">{{ content }}</pre>
-        </v-list-item>    
-        
+        </v-list-item>     
     </div>
 </template>
-
 
 <style>
 
@@ -42,5 +38,4 @@ const props = defineProps({
     align-items: left;
     font-size: 15px;
 }
-
 </style>

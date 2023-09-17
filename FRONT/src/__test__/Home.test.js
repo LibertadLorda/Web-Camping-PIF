@@ -3,7 +3,7 @@ import { expect, test } from 'vitest'
 import { createVuetify } from 'vuetify'
 import * as components from 'vuetify/components'
 import * as directives from 'vuetify/directives'
-import HelloWorld from '/Users/libertadlorda/Desktop/Web-Camping-PIF/FRONT/src/components/HelloWorld.vue'
+import Home from '/Users/libertadlorda/Desktop/Web-Camping-PIF/FRONT/src/components/Home.vue'
 
 const vuetify = createVuetify({
   components,
@@ -14,12 +14,12 @@ global.ResizeObserver = require('resize-observer-polyfill')
 
 test('displays message', () => {
   const wrapper = mount({
-    template: '<v-layout><hello-world></hello-world></v-layout>'
+    template: '<v-layout><Home></Home></v-layout>'
   }, {
     props: {},
     global: {
       components: {
-        HelloWorld,
+        Home,
       },
       plugins: [vuetify],
     }

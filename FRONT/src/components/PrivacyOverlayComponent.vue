@@ -3,11 +3,10 @@ import PolicyComponent from '../components/PolicyComponent.vue'
 import {ref} from 'vue'
 
 const dialog= ref(false);
-  
 </script>
 
 <template>
-    <span style="cursor: pointer; text-decoration: underline;" @click="dialog = !dialog">Política de Privacidad</span>
+    <span style="cursor: pointer; text-decoration: underline;" @click="dialog = !dialog"> Política de Privacidad</span>
 
     <v-dialog v-model="dialog" width="800" >
       <v-card>
@@ -218,8 +217,7 @@ Si usamos otro tipo de cookies que no sean las necesarias, podrás consultar la 
 - Los datos tratados se mantendrán en tanto no expiren los plazos legales aludidos anteriormente, si hubiera obligación legal de mantenimiento, o de no existir ese plazo legal, hasta que el interesado solicite su supresión o revoque el consentimiento otorgado.
 - Mantendremos toda la información y comunicaciones relativas a tu compra o a la prestación de nuestro servicio, mientras duren las garantías de los productos o servicios, para atender posibles reclamaciones."
             />         
-        </v-card-text>
-      </v-card>
-    </v-dialog>
- 
+      </v-card-text>
+    </v-card>
+  </v-dialog>
 </template>

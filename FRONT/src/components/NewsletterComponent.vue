@@ -1,5 +1,5 @@
 <script setup>
-import { ref, computed } from 'vue'
+import { ref } from 'vue'
 import NewsletterService from '../services/NewsletterService';
 
 const nameSurname = ref('');
@@ -47,12 +47,10 @@ const validateForm = async () => {
     email.value = null;
     language.value = null;
 };
-
-
 </script>
 
 <template>
-    <v-form ref="form" class="form">
+  <v-form ref="form" class="form">
       <v-text-field
         v-model="nameSurname"
         :counter="20"
@@ -85,23 +83,22 @@ const validateForm = async () => {
       ></v-select>
        
       <v-btn ref="formBtn" class="mt-4" block :disabled="!validateForm" @click="validateForm">Enviar</v-btn>
-    
-    
+
       <v-dialog v-model="showConfirmation" max-width="400">
-      <v-card>
-        <div class="py-4 text-center">
-          <v-icon class="mb-6" color="primary" icon="mdi-check-circle-outline" size="120"></v-icon>
-        </div>
-        <v-card-text class="py-3 text-center">
-          ¡Pronto recibirás noticias nuestras!
-        </v-card-text>
-        <v-card-actions class="d-flex justify-center">
-          <v-btn color="primary" @click="closeForm">Cerrar</v-btn>
-        </v-card-actions>
-      </v-card>
-    </v-dialog>
-    </v-form>
-  </template>
+        <v-card>
+          <div class="py-4 text-center">
+            <v-icon class="mb-6" color="primary" icon="mdi-check-circle-outline" size="120"></v-icon>
+          </div>
+          <v-card-text class="py-3 text-center">
+            ¡Pronto recibirás noticias nuestras!
+          </v-card-text>
+          <v-card-actions class="d-flex justify-center">
+            <v-btn color="primary" @click="closeForm">Cerrar</v-btn>
+          </v-card-actions>
+        </v-card>
+      </v-dialog>
+  </v-form>
+</template>
 
 <style scoped>
 
@@ -120,13 +117,10 @@ const validateForm = async () => {
 
 .form{
     width: 50vh;
-    margin: 0 auto;
+    margin: 2rem auto;
     padding: 20px;
-    border-radius: 10px;
-    border: 1px solid #ccc;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    box-sizing: border-box;
+    border-radius: 8px;
+    box-shadow:0 4px 8px #B3E5FC;
+    background-color: white;
 }
-
-
 </style>

@@ -39,49 +39,42 @@ const text =  ref ([
 </script>
 
 <template>
-<RouterLink to="/Facilities"><p class="text-right">Ver todas las instalaciones <v-icon>mdi-chevron-right</v-icon></p>
-    </RouterLink>
-  <v-sheet
-    class="mx-auto"
-    max-width="1400"
-    color="secondary"
-    
-  >
+  <RouterLink to="/Facilities"><p class="text-right">Ver todas las instalaciones <v-icon>mdi-chevron-right</v-icon></p></RouterLink>
+    <v-sheet
+      class="mx-auto"
+      max-width="1400"
+      color="secondary"
+    >
     <v-slide-group
       v-model="model"
       class="pa-7"
       center-active
       show-arrows
     >
-      <v-slide-group-item
+      
+    <v-slide-group-item
         v-for="(item, index) in image"
         :key="index"
-        v-slot="{ toggle }"
-        
+        v-slot="{ toggle }"   
       >
       <v-card
-          height="300"
-          width="350"
-          @click="toggle"
-          style="position: relative; overflow: hidden;"
-          color="secondary"
+        height="300"
+        width="350"
+        @click="toggle"
+        style="position: relative; overflow: hidden;"
+        color="secondary"
         >
+        <v-img :src= "item.src" height="160"></v-img>
         
-        <v-img
-            :src= "item.src"
-            height="160"
-          ></v-img>
-        
-          <div class="text-left pa-3">
-            <p class="title"> {{ title [index] }}</p>
-            <p class="text"> {{ text[index] }}</p>
-          </div>        
-        </v-card>
-      </v-slide-group-item>
-    </v-slide-group>
+        <div class="text-left pa-3">
+          <p class="title"> {{ title [index] }}</p>
+          <p class="text"> {{ text[index] }}</p>
+        </div>        
+      </v-card>
+    </v-slide-group-item>
+  </v-slide-group>
   </v-sheet>
 </template>
-
 
 <style scoped>
 

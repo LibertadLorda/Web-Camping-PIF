@@ -18,7 +18,4 @@ export default({
         return http.put(`/camping/update/${productId}`, ProductData);
     },
     
-    delete(productId) {
-        return http.delete(`/camping/delete/${productId}`);
-    }
 });

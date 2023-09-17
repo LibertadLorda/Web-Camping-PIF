@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Home from '../views/Home.vue'
-import Contact from '../views/Contact.vue'
+import Booking from '../views/Booking.vue'
 import Facilities from '../views/Facilities.vue'
 import Legacy from '../views/Legacy.vue'
 import Privacy from '../views/Privacy.vue'
@@ -20,9 +20,9 @@ const routes = [
         component: Facilities,
       },
       {
-        path: '/Contact',
-        name: 'Contact',
-        component: Contact,
+        path: '/Booking',
+        name: 'Booking',
+        component: Booking,
       },
       {
         path: '/Legacy',
@@ -44,8 +44,6 @@ const routes = [
         name: 'Gallery',
         component: Gallery,
       },
-
-     
     ]
 
 const router = createRouter({
